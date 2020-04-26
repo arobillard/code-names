@@ -1,0 +1,866 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@-moz-viewport {
+  width: device-width;
+  scale: 1;
+}
+@-ms-viewport {
+  width: device-width;
+  scale: 1;
+}
+@-o-viewport {
+  width: device-width;
+  scale: 1;
+}
+@-webkit-viewport {
+  width: device-width;
+  scale: 1;
+}
+@viewport {
+  width: device-width;
+  scale: 1;
+}
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+template {
+  display: none;
+}
+
+details {
+  cursor: pointer;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+img {
+  border: 0;
+}
+
+.img-flex,
+.img-flex img {
+  display: block;
+  width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg.img-flex {
+  width: 100%;
+  height: 100%;
+}
+
+.icon, .icon-more-menu {
+  display: flex;
+  position: relative;
+  background: transparent none no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.icon svg, .icon-more-menu svg, .icon img, .icon-more-menu img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-more-menu {
+  width: 12px;
+}
+
+.list-group, .list-group-flex {
+  padding: 0;
+  list-style-type: none;
+}
+.list-group li, .list-group-flex li {
+  display: block;
+}
+
+.list-group-flex {
+  display: flex;
+}
+
+.mdc-list {
+  padding: 0.5rem;
+}
+.mdc-list > li, .mdc-list > a, .mdc-list > button {
+  display: flex;
+  padding: 0.5rem;
+}
+.mdc-list > li:not(:last-child), .mdc-list > a:not(:last-child), .mdc-list > button:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.mdc-list > li i, .mdc-list > a i, .mdc-list > button i {
+  margin-right: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  writing-mode: horizontal-tb !important;
+  color: inherit;
+  text-indent: 0px;
+  cursor: pointer;
+  background-color: inherit;
+  margin: 0;
+  font: inherit;
+  padding: 0;
+  border-width: 0;
+}
+button:focus {
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.35em 1em 0.45em;
+  border-radius: 10px;
+  background-color: #f88;
+  border: 3px solid #d66;
+  color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s;
+}
+.btn:hover, .btn:focus {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote,
+details,
+hr,
+fieldset,
+pre,
+table,
+caption,
+menu {
+  margin: 0 0 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f88;
+}
+
+html {
+  line-height: 1.3;
+  font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+h1, .headline-1 {
+  font-weight: 300;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+}
+
+h2, .headline-2 {
+  font-weight: 300;
+  font-size: 3.75rem;
+  letter-spacing: -0.5px;
+}
+
+h3, .headline-3 {
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0;
+}
+
+h4, .headline-4 {
+  font-weight: 400;
+  font-size: 2.125rem;
+  letter-spacing: 0;
+}
+
+h5, .headline-5 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+h6, .headline-6 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+}
+
+.subtitle-1 {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+}
+
+.subtitle-2 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1px;
+}
+
+p, .body-1 {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.body-2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+}
+
+@media only screen and (max-width: 37.999em) {
+  h1, .headline-1 {
+    font-size: 3.81rem;
+  }
+
+  h2, .headline-2 {
+    font-size: 3.05rem;
+  }
+
+  h3, .headline-3 {
+    font-size: 2.44rem;
+  }
+
+  h4, .headline-4 {
+    font-size: 1.95rem;
+  }
+
+  h5, .headline-5 {
+    font-size: 1.56rem;
+  }
+
+  h6, .headline-6 {
+    font-size: 1.25rem;
+  }
+
+  .subtitle-1 {
+    font-size: 1rem;
+  }
+
+  .subtitle-2 {
+    font-size: 0.875rem;
+  }
+
+  p, .body-1 {
+    font-size: 1rem;
+  }
+
+  .body-2 {
+    font-size: 0.875rem;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.island {
+  padding: 1rem;
+}
+
+.island-1-1-4 {
+  padding: 1.25rem;
+}
+
+.island-1-1-2 {
+  padding: 1.5rem;
+}
+
+.island-2 {
+  padding: 2rem;
+}
+
+.gutter {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gutter-1-1-4 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.gutter-1-1-2 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.gutter-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pad-t, .pad-t-b {
+  padding-top: 1rem;
+}
+
+.pad-t-1-1-4, .pad-t-b-1-1-4 {
+  padding-top: 1.25rem;
+}
+
+.pad-t-1-1-2, .pad-t-b-1-1-2 {
+  padding-top: 1.5rem;
+}
+
+.pad-t-2, .pad-t-b-2 {
+  padding-top: 2rem;
+}
+
+.pad-t-4, .pad-t-b-4 {
+  padding-top: 4rem;
+}
+
+.pad-b, .pad-t-b {
+  padding-bottom: 1rem;
+}
+
+.pad-b-1-1-4, .pad-t-b-1-1-4 {
+  padding-bottom: 1.25rem;
+}
+
+.pad-b-1-1-2, .pad-t-b-1-1-2 {
+  padding-bottom: 1.5rem;
+}
+
+.pad-b-2, .pad-t-b-2 {
+  padding-bottom: 2rem;
+}
+
+.pad-b-4, .pad-t-b-4 {
+  padding-bottom: 4rem;
+}
+
+.push-0 {
+  margin-bottom: 0;
+}
+
+.push {
+  margin-bottom: 1rem;
+}
+
+.push-1-2 {
+  margin-bottom: 0.5rem;
+}
+
+.push-1-4 {
+  margin-bottom: 0.25rem;
+}
+
+.push-1-1-4 {
+  margin-bottom: 1.25rem;
+}
+
+.push-1-1-2 {
+  margin-bottom: 1.5rem;
+}
+
+.push-2 {
+  margin-bottom: 2rem;
+}
+
+.push-l {
+  margin-left: 1rem;
+}
+
+.push-l-1-1-4 {
+  margin-left: 1.25rem;
+}
+
+.push-l-1-1-2 {
+  margin-left: 1.5rem;
+}
+
+.push-l-2 {
+  margin-left: 2rem;
+}
+
+.push-r {
+  margin-right: 1rem;
+}
+
+.push-r-1-1-4 {
+  margin-right: 1.25rem;
+}
+
+.push-r-1-1-2 {
+  margin-right: 1.5rem;
+}
+
+.push-r-2 {
+  margin-right: 2rem;
+}
+
+.spread-top {
+  margin-top: auto;
+}
+
+.spread-right {
+  margin-right: auto;
+}
+
+.spread-bottom {
+  margin-bottom: auto;
+}
+
+.spread-left {
+  margin-left: auto;
+}
+
+.page-content {
+  padding-bottom: 7rem;
+}
+
+.w-1 {
+  width: 100%;
+}
+
+.w-1-2 {
+  width: 50%;
+}
+
+.w-1-3 {
+  width: 33.3333%;
+}
+
+.w-2-3 {
+  width: 66.6666%;
+}
+
+.w-1-4 {
+  width: 25%;
+}
+
+.w-3-4 {
+  width: 75%;
+}
+
+.w-1-5 {
+  width: 20%;
+}
+
+.w-2-5 {
+  width: 40%;
+}
+
+.w-3-5 {
+  width: 60%;
+}
+
+.w-4-5 {
+  width: 80%;
+}
+
+.h-1 {
+  height: 100%;
+}
+
+.h-1-2 {
+  height: 50%;
+}
+
+.h-1-3 {
+  height: 33.3333%;
+}
+
+.h-2-3 {
+  height: 66.6666%;
+}
+
+.h-1-4 {
+  height: 25%;
+}
+
+.h-3-4 {
+  height: 75%;
+}
+
+.h-1-5 {
+  height: 20%;
+}
+
+.h-2-5 {
+  height: 40%;
+}
+
+.h-3-5 {
+  height: 60%;
+}
+
+.h-4-5 {
+  height: 80%;
+}
+
+.wrapper {
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.masthead {
+  background-color: #f88;
+  border-bottom: 10px solid #d66;
+}
+.masthead a {
+  color: #fff;
+}
+
+.footer {
+  background-color: #666;
+  border-top: 10px solid #555;
+  color: #fff;
+}
+.footer .wrapper {
+  text-align: center;
+}
+.footer .wrapper > div:last-child {
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 38em) {
+  .footer .wrapper {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .wrapper > div:last-child {
+    padding-top: 0;
+    text-align: right;
+  }
+}
+
+.welcome-form {
+  max-width: 40em;
+  margin: 0 auto;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+.welcome-form .grid-input-btn input {
+  width: 100%;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 38em) {
+  .welcome-form .grid-input-btn {
+    display: flex;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  }
+  .welcome-form .grid-input-btn input {
+    width: 66.6666%;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    display: block;
+    margin-bottom: 0;
+  }
+  .welcome-form .grid-input-btn button {
+    font-size: 1.25rem;
+    width: 33.3333%;
+    border-left: 0;
+    border-radius: 0 10px 10px 0;
+    box-shadow: none;
+  }
+}
+
+.gameboard .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+.gameboard .cards .card {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 3px solid #e2d3b3;
+  background-color: #f2e3c3;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s, color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+.gameboard .cards .card:hover, .gameboard .cards .card:focus {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+.gameboard .cards .card:hover {
+  cursor: pointer;
+}
+.gameboard .cards .card:focus {
+  outline: none;
+  border-color: #8f8;
+}
+.gameboard .cards .card p {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: SaddleBrown;
+}
+.gameboard .cards.spymaster .red,
+.gameboard .cards .red.revealed {
+  background-color: #f88;
+  border-color: #d66;
+}
+.gameboard .cards.spymaster .red p,
+.gameboard .cards .red.revealed p {
+  color: #fff;
+}
+.gameboard .cards.spymaster .blue,
+.gameboard .cards .blue.revealed {
+  background-color: #88f;
+  border-color: #66d;
+}
+.gameboard .cards.spymaster .blue p,
+.gameboard .cards .blue.revealed p {
+  color: #fff;
+}
+.gameboard .cards.spymaster .assassin,
+.gameboard .cards .assassin.revealed {
+  background-color: #333;
+  border-color: #444;
+}
+.gameboard .cards.spymaster .assassin p,
+.gameboard .cards .assassin.revealed p {
+  color: #fff;
+}
+.gameboard .cards.spymaster .revealed {
+  opacity: 0.5;
+}
+.gameboard .cards .civilian.revealed {
+  opacity: 0.2;
+}
+@media only screen and (min-width: 38em) {
+  .gameboard .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 50em) {
+  .gameboard .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (min-width: 60em) {
+  .gameboard {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 1rem;
+  }
+  .gameboard .cards {
+    margin-bottom: 0;
+  }
+}
+
+.control-bar {
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+.control-bar h2 {
+  border-bottom: 3px solid #ccc;
+}
+
+.switch, .switch * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.switch label input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #f88;
+}
+
+.switch label input[type=checkbox]:checked + .lever:before, .switch label input[type=checkbox]:checked + .lever:after {
+  left: 18px;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #d66;
+}
+
+.switch label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-radius: 15px;
+  margin-right: 10px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+}
+
+input:focus + .lever {
+  outline: 3px solid #8f8;
+  outline-offset: 3px;
+}
+
+.switch label .lever:before, .switch label .lever:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0;
+  top: -3px;
+  -webkit-transition: left 0.3s ease, background 0.3s ease, -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease, transform 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease, transform 0.1s ease, -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+.switch label .lever:before {
+  background-color: rgba(255, 138, 138, 0.2);
+}
+
+.switch label .lever:after {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before, input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
+  -webkit-transform: scale(2.4);
+  transform: scale(2.4);
+  background-color: rgba(255, 138, 138, 0.2);
+}
+
+input[type=checkbox]:not(:disabled) ~ .lever:active:before, input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
+  -webkit-transform: scale(2.4);
+  transform: scale(2.4);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.switch input[type=checkbox][disabled] + .lever {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.switch label input[type=checkbox][disabled] + .lever:after, .switch label input[type=checkbox][disabled]:checked + .lever:after {
+  background-color: #949494;
+}
+
+/*# sourceMappingURL=main.css.map */
