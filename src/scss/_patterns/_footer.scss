@@ -1,0 +1,20 @@
+.footer {
+  background-color: $c-primary;
+  border-top: 10px solid $c-primary-dark;
+  color: #fff;
+  .wrapper {
+    text-align: center;
+    & >div:last-child {
+      padding-top: 2rem;
+    }
+    @media only screen and (min-width: 38em) {
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      & >div:last-child {
+        padding-top: 0;
+        text-align: right;
+      }
+    }
+  }
+}
