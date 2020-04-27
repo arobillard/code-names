@@ -500,11 +500,16 @@ const wordlist = [
 ]
 
 export function words() {
-  const getTwentyFiveWords = function() {
+  const getTwentyFiveWords = function () {
     let newList = []
-    for (let i = 0; i < 25; i++) {
-      const newWord = rando(wordlist);
-      newList.push(newWord);
+    for (let newListCount = newList.length; newListCount < 25;) {
+      let newWord = rando(wordlist);
+      if (newList.indexOf(newWord) !== -1) {
+        continue;
+      } else {
+        newList.push(newWord);
+      }
+      newListCount = newList.length;
     }
     return newList;
   }
