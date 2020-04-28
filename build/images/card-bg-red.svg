@@ -1,0 +1,33 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="401" height="239.13" viewBox="0 0 401 239.13">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5-2" data-name="Rectangle 5-2" width="401" height="239.13" rx="31.06" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-17.71" y1="245.57" x2="153.98" y2="-5.72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.33" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.69" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-65.1" y1="234.79" x2="91.9" y2="5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="155.26" y1="245.57" x2="326.96" y2="-5.72" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="221.98" y1="234.79" x2="378.98" y2="5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <rect id="Rectangle_5-2-2" data-name="Rectangle 5-2" width="401" height="239.13" rx="31.06" fill="#d3100f"/>
+    <rect x="20" y="20" width="361" height="199.13" rx="11.06" fill="none" stroke="#7f0806" stroke-miterlimit="10" stroke-width="3"/>
+    <path d="M371,134.07v67.56a7.53,7.53,0,0,1-7.5,7.51H37.5a7.53,7.53,0,0,1-7.5-7.51V134.07Z" fill="#fff"/>
+    <rect x="295.71" y="29.57" width="75.2" height="94" fill="#e98787"/>
+    <rect x="291.31" y="43.97" width="84" height="65.2" transform="translate(409.87 -256.74) rotate(90)" fill="#7f0806"/>
+    <rect x="29.91" y="120.57" width="256" height="3" fill="#7f0806"/>
+    <g>
+      <path d="M310.06,110.65c1.34-6.25,3.58-13.41,3.58-21s-8.05-13.86-8.05-25.93,10.28-21.46,26.82-21.46,21,12.52,22.36,16.54-.45,8.95,0,10.29S361,76.23,361,78s-4.47,3.13-4.47,4-1,13.35-1.79,14.31c-2.44,2.86-10.06,1.12-11.85,2.46s-5.36,8.49-3.13,12.07C333.53,110.88,310.06,110.65,310.06,110.65Z" fill="#9f4644"/>
+      <path d="M357,76.57,349,76.48a.88.88,0,0,1-.87-.8l-.92-9.89a.88.88,0,0,1,.7-1l7.91-1.58a3.22,3.22,0,0,1,3.83,2.85l.65,6.94A3.22,3.22,0,0,1,357,76.57Z" fill="#9f4644"/>
+      <path d="M348.33,118.57H303.26l2.33-10.24a3.75,3.75,0,0,1,3.75-3.75h31.72C343.13,104.58,348.33,118.57,348.33,118.57Z" fill="#9f4644"/>
+    </g>
+    <polygon points="185.49 0 116.41 0 -48.73 239.13 20.35 239.13 185.49 0" opacity="0.25" fill="url(#linear-gradient)"/>
+    <polygon points="105.73 0 86.66 0 -78.48 239.13 -59.41 239.13 105.73 0" opacity="0.25" fill="url(#linear-gradient-2)"/>
+    <polygon points="358.46 0 289.39 0 124.25 239.13 193.32 239.13 358.46 0" opacity="0.25" fill="url(#linear-gradient-3)"/>
+    <polygon points="392.81 0 373.74 0 208.6 239.13 227.68 239.13 392.81 0" opacity="0.25" fill="url(#linear-gradient-4)"/>
+  </g>
+</svg>

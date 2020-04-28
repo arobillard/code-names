@@ -138,7 +138,7 @@ const wordlist = [
   "Missile",
   "Paste",
   "Drop",
-  "Pheonix",
+  "Phoenix",
   "Marble",
   "Staff",
   "Figure",
@@ -404,7 +404,7 @@ const wordlist = [
   "Box",
   "Mount",
   "Thumb",
-  "Antactica",
+  "Antarctica",
   "Trunk",
   "Snow",
   "Penguin",
@@ -424,7 +424,7 @@ const wordlist = [
   "Cliff",
   "Lab",
   "Eagle",
-  "Genious",
+  "Genius",
   "Ship",
   "Dice",
   "Hood",
@@ -487,7 +487,7 @@ const wordlist = [
   "Light",
   "Death",
   "Stock",
-  "Millionarie",
+  "Millionaire",
   "Day",
   "Knight",
   "Pie",
@@ -500,11 +500,16 @@ const wordlist = [
 ]
 
 export function words() {
-  const getTwentyFiveWords = function() {
+  const getTwentyFiveWords = function () {
     let newList = []
-    for (let i = 0; i < 25; i++) {
-      const newWord = rando(wordlist);
-      newList.push(newWord);
+    for (let newListCount = newList.length; newListCount < 25;) {
+      let newWord = rando(wordlist);
+      if (newList.indexOf(newWord) !== -1) {
+        continue;
+      } else {
+        newList.push(newWord);
+      }
+      newListCount = newList.length;
     }
     return newList;
   }

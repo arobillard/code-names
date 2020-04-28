@@ -1,5 +1,5 @@
 import React from 'react';
-import { gameCode } from '../../helpers';
+import { gameCode, slugify } from '../../helpers';
 
 class Welcome extends React.Component {
   gcInput = React.createRef();
@@ -9,7 +9,7 @@ class Welcome extends React.Component {
     // get gamecode from input
     const gamecode = this.gcInput.current.value;
     //change page to the gamecode
-    this.props.history.push(`/${gamecode}`);
+    this.props.history.push(`/${slugify(gamecode)}`);
   }
 
   render() {

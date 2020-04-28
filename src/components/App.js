@@ -27,8 +27,6 @@ class App extends React.Component {
         context: this,
         state: 'cards'
       });
-      // if (this.state.cards[0])
-      console.log(this.state.cards);
       // this.generateCards();
     }
     
@@ -68,12 +66,10 @@ class App extends React.Component {
     numberGenerator(randoNums);
     for (let i = 0; i < redAmount; i++) {
       newWordListObject[`word${randoNums[i]}`].team = 'red';
-      console.log('team red: ' + randoNums[i])
     }
     randoNums.splice(0, 9)
     for (let i = 0; i < blueAmount; i++) {
       newWordListObject[`word${randoNums[i]}`].team = 'blue';
-      console.log('team blue: ' + randoNums[i])
     }
     randoNums.splice(0, 8)
     newWordListObject[`word${randoNums[0]}`].team = 'assassin';

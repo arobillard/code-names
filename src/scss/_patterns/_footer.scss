@@ -1,7 +1,10 @@
 .footer {
-  background-color: $c-primary;
-  border-top: 10px solid $c-primary-dark;
+  background-color: $c-maroon;
+  // border-top: 10px solid $c-primary-dark;
   color: #fff;
+  a {
+    color: $c-yellow;
+  }
   .wrapper {
     text-align: center;
     & >div:last-child {
