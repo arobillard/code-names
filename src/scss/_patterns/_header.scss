@@ -1,6 +1,8 @@
 .masthead {
   background-color: $c-red;
-  border-bottom: 10px solid $c-red-dark;
+  background-image: $gradient;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+  // border-bottom: 10px solid $c-red-dark;
   a {
     color: #fff;
   }
