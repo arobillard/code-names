@@ -20,12 +20,15 @@ class Welcome extends React.Component {
           <p>To start a new game, simply enter a new unique <strong>Gamecode</strong> in the form below and hit <em>Start Playing</em>! If you wish to join a game someone else created, enter their <strong>Gamecode</strong> and hit <em>Start Playing</em>!</p>
           <div className="grid-input-btn">
             <input
+              id="gamecode"
+              name="gamecode"
               type="text"
               ref={this.gcInput}
               required
               placeholder="Enter Gamecode"
               defaultValue={gameCode()}
             />
+            <label className="hidden" htmlFor="gamecode">Gamecode</label>
             <button className="btn" type="submit">Start Playing!</button>
           </div>
         </form>

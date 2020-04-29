@@ -5,11 +5,12 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="masthead">
+      <header className={`masthead`}>
         <div className="wrapper gutter pad-t-4 pad-b">
-          <h1 className="push-0 headline-2">
+          <h1 className="push-0 headline-2 push-r">
             <Link to='/'>Codenames</Link>
           </h1>
+          <p>A game of words, secrets, and intrigue!</p>
         </div>
       </header>
     )

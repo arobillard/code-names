@@ -4,34 +4,34 @@ class CardDesign extends React.Component {
 
   render() {
     return (
-      <svg class="card-design" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 401 239.13">
+      <svg className="card-design" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 401 239.13">
         <defs>
           <clipPath id="clip-path">
           <rect id="Rectangle_5-2" data-name="Rectangle 5-2" width="401" height="239.13" rx="31.06" fill="none" />
           </clipPath>
           <linearGradient id="linear-gradient" x1="-17.71" y1="245.57" x2="153.98" y2="-5.72" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff" />
-            <stop offset="0.33" stop-color="#fff" stop-opacity="0" />
-            <stop offset="0.69" stop-color="#fff" stop-opacity="0" />
-            <stop offset="1" stop-color="#fff" />
+            <stop offset="0" stopColor="#fff" />
+            <stop offset="0.33" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.69" stopColor="#fff" stopOpacity="0" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
           <linearGradient id="linear-gradient-2" x1="-65.1" y1="234.79" x2="91.9" y2="5" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff" />
-            <stop offset="0.33" stop-color="#fff" stop-opacity="0" />
-            <stop offset="0.69" stop-color="#fff" stop-opacity="0" />
-            <stop offset="1" stop-color="#fff" />
+            <stop offset="0" stopColor="#fff" />
+            <stop offset="0.33" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.69" stopColor="#fff" stopOpacity="0" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
           <linearGradient id="linear-gradient-3" x1="155.26" y1="245.57" x2="326.96" y2="-5.72" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff" />
-            <stop offset="0.33" stop-color="#fff" stop-opacity="0" />
-            <stop offset="0.69" stop-color="#fff" stop-opacity="0" />
-            <stop offset="1" stop-color="#fff" />
+            <stop offset="0" stopColor="#fff" />
+            <stop offset="0.33" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.69" stopColor="#fff" stopOpacity="0" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
           <linearGradient id="linear-gradient-4" x1="221.98" y1="234.79" x2="378.98" y2="5" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff" />
-            <stop offset="0.33" stop-color="#fff" stop-opacity="0" />
-            <stop offset="0.69" stop-color="#fff" stop-opacity="0" />
-            <stop offset="1" stop-color="#fff" />
+            <stop offset="0" stopColor="#fff" />
+            <stop offset="0.33" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.69" stopColor="#fff" stopOpacity="0" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
         </defs>
         <g id="card-base">
@@ -43,7 +43,7 @@ class CardDesign extends React.Component {
           <path id="card-profile-head" d="M359.59,75.32a3.16,3.16,0,0,0,.68-2.27l-.65-6.94a3.22,3.22,0,0,0-3.83-2.85l-.55.11a12.31,12.31,0,0,0-.47-4.58c-1.34-4-5.81-16.54-22.36-16.54s-26.82,9.39-26.82,21.46,8.05,18.33,8.05,25.93a65,65,0,0,1-2.17,14.94h-2.13a3.75,3.75,0,0,0-3.75,3.75l-2.33,10.24h45.07s-5.2-14-7.27-14h-1.39c.81-2.63,2.29-5,3.25-5.77,1.79-1.34,9.41.4,11.85-2.46.82-1,1.79-13.41,1.79-14.31S361,79.81,361,78A6.38,6.38,0,0,0,359.59,75.32Z" fill="#e9dec6" />
           <rect id="card-word-separator" x="29.91" y="120.57" width="256" height="3" fill="#e2d3b3" />
           <g id="card-shine-clip" opacity="0.25">
-            <g clip-path="url(#clip-path)">
+            <g clipPath="url(#clip-path)">
             <polygon points="185.49 0 116.41 0 -48.73 239.13 20.35 239.13 185.49 0" fill="url(#linear-gradient)" />
             <polygon points="105.73 0 86.66 0 -78.48 239.13 -59.41 239.13 105.73 0" fill="url(#linear-gradient-2)" />
             <polygon points="358.46 0 289.39 0 124.25 239.13 193.32 239.13 358.46 0" fill="url(#linear-gradient-3)" />

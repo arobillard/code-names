@@ -6,7 +6,10 @@ import base from '../base';
 class App extends React.Component {
 
   state = {
-    cards: [],
+    gameData: {
+      cards: {},
+      users: {}
+    },
     spymaster: false
   }
 
@@ -15,17 +18,17 @@ class App extends React.Component {
     if (localStorageRef) {
       const savedState = JSON.parse(localStorageRef);
       this.setState({
-        cards: savedState.cards,
+        gameData: savedState.gameData,
         spymaster: savedState.spymaster
       });
       this.ref = base.syncState(this.props.match.params.gamecode, {
         context: this,
-        state: 'cards'
+        state: 'gameData'
       });
     } else {
       this.ref = base.syncState(this.props.match.params.gamecode, {
         context: this,
-        state: 'cards'
+        state: 'gameData'
       });
       // this.generateCards();
     }
@@ -34,6 +37,22 @@ class App extends React.Component {
 
   componentDidUpdate() {
     localStorage.setItem(this.props.match.params.gamecode, JSON.stringify(this.state))
+  }
+
+  addUserName = (e) => {
+    e.preventDefault();
+    console.log(e)
+    console.log('sweet username!')
+  }
+
+  teamAssign = (user) => {
+    console.log(user);
+    // take a copy of state
+    const users = { ...this.state.gameData.users }
+    // create a new user
+    users[user.userName] = user;
+    // set state
+    this.setState({ gameData: { users } })
   }
 
   generateCards = () => {
@@ -73,18 +92,22 @@ class App extends React.Component {
     }
     randoNums.splice(0, 8)
     newWordListObject[`word${randoNums[0]}`].team = 'assassin';
-    this.setState({ cards: newWordListObject });
+    this.setState({
+      gameData: {
+        cards: newWordListObject
+      }
+    });
   }
 
   cardReveal = (key) => {
     // Get current target
     const target = key.currentTarget.getAttribute('index');
     // Grab the current list of cards
-    const cards = {...this.state.cards}
+    const cards = {...this.state.gameData.cards}
     // update the selected 
     cards[target].revealed = true;
     // update state
-    this.setState({ cards })
+    this.setState({ gameData: { cards } })
   }
 
   spymasterSwitch = (e) => {
@@ -98,11 +121,13 @@ class App extends React.Component {
   render() {
     return (
       <GameBoard
-        state={this.state}
+        appState={this.state}
         cardReveal={this.cardReveal}
         spymasterSwitch={this.spymasterSwitch}
         gamecode={this.props.match.params.gamecode}
         generateCards={this.generateCards}
+        addUserName={this.addUserName}
+        teamAssign={this.teamAssign}
       />
     )
   }

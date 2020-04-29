@@ -8,6 +8,10 @@ import Footer from './ui-elements/Footer';
 
 class Router extends React.Component {
 
+  state = {
+    userName: "Adam"
+  }
+
   render() {
     return(
       <BrowserRouter>
