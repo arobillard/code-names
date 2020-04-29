@@ -2,10 +2,6 @@ import React from 'react';
 
 class UserTeam extends React.Component {
 
-  state = {
-    lcoalUser: {}
-  }
-
   formRef = React.createRef();
   userNameRef = React.createRef();
   teamRed = React.createRef();
@@ -13,21 +9,59 @@ class UserTeam extends React.Component {
 
   userTeamAssign = (e) => {
     e.preventDefault();
-    e.target.closest('div').classList.add('hidden');
     if (this.formRef.current[1].checked) {
       const user = {
         userName: this.userNameRef.current.value,
         team: 'red'
       }
       this.props.teamAssign(user)
-      this.setState({ lcoalUser: user })
+      this.props.localUser(user)
     } else {
       const user = {
         userName: this.userNameRef.current.value,
         team: 'blue'
       }
       this.props.teamAssign(user)
-      this.setState({ lcoalUser: user })
+      this.props.localUser(user)
+    }
+  }
+
+  nameInput = () => {
+    if (this.props.localUserDefault !== null) {
+      console.log('not null path')
+      console.log(this.props.localUserDefault)
+      return (
+        <>
+        <input
+          id="user-name"
+          className="push"
+          name="user-name"
+          type="text"
+          ref={this.userNameRef}
+          required
+          placeholder="Enter Username"
+          defaultValue={this.props.localUserDefault.userName}
+        />
+        <label className="hidden" htmlFor="user-name">Username</label>
+        </>
+      )
+    } else {
+      console.log('else path')
+      console.log(this.props.localUserDefault)
+      return (
+        <>
+          <input
+            id="user-name"
+            className="push"
+            name="user-name"
+            type="text"
+            ref={this.userNameRef}
+            required
+            placeholder="Enter Username"
+          />
+          <label className="hidden" htmlFor="user-name">Username</label>
+        </>
+      )
     }
   }
 
@@ -37,17 +71,7 @@ class UserTeam extends React.Component {
         <form className="user-team-pop-up island-2 text-center" ref={this.formRef} onSubmit={this.userTeamAssign}>
           <h2 className="headline-4">Pick your name &amp; team!</h2>
           <p>(You can change your team later if you need to!)</p>
-          <input
-            id="user-name"
-            className="push"
-            name="user-name"
-            type="text"
-            ref={this.userNameRef}
-            required
-            placeholder="Enter Username"
-            defaultValue="Adam"
-          />
-          <label className="hidden" htmlFor="user-name">Username</label>
+          {this.nameInput()}
           <div>
             <input
               id="team-red"

@@ -39,6 +39,53 @@ class App extends React.Component {
     localStorage.setItem(this.props.match.params.gamecode, JSON.stringify(this.state))
   }
 
+  deleteUser = (user) => {
+    console.log('globally delete')
+    console.log(user)
+    // 1. take a copy of the current state
+    const users = { ...this.state.gameData.users };
+    // 2. update that state
+    users[user] = null;
+    // 3. Set that to state
+    this.setState({
+      gameData: {
+        users: users
+      }
+    })
+  }
+
+  switchTeam = (user, team) => {
+    if (team === 'red') {
+      // 1. take a copy of the current state
+      const users = { ...this.state.gameData.users };
+      // 2. update that state
+      users[user] = {
+        userName: user,
+        team: 'blue'
+      };
+      // 3. Set that to state
+      this.setState({
+        gameData: {
+          users: users
+        }
+      })
+    } else {
+      // 1. take a copy of the current state
+      const users = { ...this.state.gameData.users };
+      // 2. update that state
+      users[user] = {
+        userName: user,
+        team: 'red'
+      };
+      // 3. Set that to state
+      this.setState({
+        gameData: {
+          users: users
+        }
+      })
+    }
+  }
+
   addUserName = (e) => {
     e.preventDefault();
     console.log(e)
@@ -128,6 +175,8 @@ class App extends React.Component {
         generateCards={this.generateCards}
         addUserName={this.addUserName}
         teamAssign={this.teamAssign}
+        deleteUser={this.deleteUser}
+        switchTeam={this.switchTeam}
       />
     )
   }
