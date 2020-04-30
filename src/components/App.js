@@ -1,12 +1,14 @@
 import React from 'react';
-import GameBoard from './ui-elements/GameBoard';
 import { words } from '../helpers';
 import base from '../base';
+import Card from './ui-elements/Card';
+import ControlBar from './ui-elements/ControlBar';
 
 class App extends React.Component {
 
   state = {
-    cards: [],
+    cards: {},
+    users: {},
     spymaster: false
   }
 
@@ -16,20 +18,28 @@ class App extends React.Component {
       const savedState = JSON.parse(localStorageRef);
       this.setState({
         cards: savedState.cards,
+        users: savedState.users,
         spymaster: savedState.spymaster
       });
-      this.ref = base.syncState(this.props.match.params.gamecode, {
+      this.ref = base.syncState(`${this.props.match.params.gamecode}/cards`, {
         context: this,
         state: 'cards'
+      });
+      this.ref = base.syncState(`${this.props.match.params.gamecode}/users`, {
+        context: this,
+        state: 'users'
       });
     } else {
-      this.ref = base.syncState(this.props.match.params.gamecode, {
-        context: this,
-        state: 'cards'
+      this.ref = base.syncState(`${this.props.match.params.gamecode}/cards`, {
+          context: this,
+          state: 'cards'
       });
-      // this.generateCards();
+      this.ref = base.syncState(`${this.props.match.params.gamecode}/users`, {
+          context: this,
+          state: 'users'
+      });
+        // this.generateCards();
     }
-    
   }
 
   componentDidUpdate() {
@@ -73,7 +83,9 @@ class App extends React.Component {
     }
     randoNums.splice(0, 8)
     newWordListObject[`word${randoNums[0]}`].team = 'assassin';
-    this.setState({ cards: newWordListObject });
+    this.setState({
+      cards: newWordListObject
+    });
   }
 
   cardReveal = (key) => {
@@ -84,7 +96,9 @@ class App extends React.Component {
     // update the selected 
     cards[target].revealed = true;
     // update state
-    this.setState({ cards })
+    this.setState({
+      cards: cards
+    });
   }
 
   spymasterSwitch = (e) => {
@@ -97,13 +111,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <GameBoard
-        state={this.state}
-        cardReveal={this.cardReveal}
-        spymasterSwitch={this.spymasterSwitch}
-        gamecode={this.props.match.params.gamecode}
-        generateCards={this.generateCards}
-      />
+      <div className="gameboard wrapper gutter spread-top spread-bottom">
+        <section className={`cards${this.state.spymaster ? ' spymaster' : ''}`}>
+          {Object.keys(this.state.cards).map(key => (
+            <Card
+              key={key}
+              index={key}
+              data={this.state.cards[key]}
+              cardReveal={this.cardReveal}
+              spymaster={this.state.spymaster}
+            />
+          ))}
+        </section>
+        <aside className="info">
+          <ControlBar
+            gamecode={this.props.match.params.gamecode}
+            spymasterSwitch={this.spymasterSwitch}
+            generateCards={this.generateCards}
+            spymaster={this.state.spymaster}
+          />
+        </aside>
+      </div>
     )
   }
 

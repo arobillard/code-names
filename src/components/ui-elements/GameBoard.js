@@ -5,26 +5,26 @@ import ControlBar from './ControlBar';
 class GameBoard extends React.Component {
 
   render() {
-    const state = this.props.state;
+    const appState = this.props.appState;
     return (
       <div className="gameboard wrapper gutter spread-top spread-bottom">
-        <section className={`cards${state.spymaster ? ' spymaster' : ''}`}>
-          {Object.keys(state.cards).map(key => (
+        <section className={`cards${appState.spymaster ? ' spymaster' : ''}`}>
+          {/* {Object.keys(appState.cards).map(key => (
             <Card
               key={key}
               index={key}
-              data={state.cards[key]}
+              data={appState.cards[key]}
               cardReveal={this.props.cardReveal}
-              spymaster={state.spymaster}
+              spymaster={appState.spymaster}
             />
-          ))}
+          ))} */}
         </section>
         <aside className="info">
           <ControlBar
             gamecode={this.props.gamecode}
             spymasterSwitch={this.props.spymasterSwitch}
             generateCards={this.props.generateCards}
-            spymaster={state.spymaster}
+            spymaster={appState.spymaster}
           />
         </aside>
       </div>
