@@ -113,6 +113,7 @@ class App extends React.Component {
           handleConfirm={handleConfirm}
           generateCards={this.generateCards}
           fullTeamSwap={this.fullTeamSwap}
+          cards={this.state.cards}
         />
         // <button onClick={handleConfirm}>Confirm</button>
       )
@@ -248,9 +249,6 @@ class App extends React.Component {
     teamBlueKeys.forEach(key => {
       this.switchTeam(key, 'blue');
     })
-    console.log(teamRedKeys)
-    console.log(teamBlueKeys)
-
   }
 
   switchTeam = (userName, team) => {

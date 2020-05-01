@@ -25,7 +25,6 @@ class UserTeam extends React.Component {
   }
 
   nameInput = () => {
-    console.log(this.props.localUserDefault)
     if (this.props.localUserDefault !== null) {
       return (
         <>

@@ -5,7 +5,9 @@ class ConfirmNewGame extends React.Component {
   newGame = () => {
     this.props.generateCards();
     this.props.handleConfirm();
-    this.props.fullTeamSwap();
+    if (this.props.cards.word1 !== undefined) {
+      this.props.fullTeamSwap();
+    }
   }
 
   cancel = () => {
