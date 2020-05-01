@@ -54,6 +54,7 @@ class App extends React.Component {
   componentDidUpdate() {
     localStorage.setItem(this.props.match.params.gamecode, JSON.stringify(this.state))
     localStorage.setItem('localUser', JSON.stringify(this.state.localUser))
+
   }
 
   generateCards = () => {
@@ -142,6 +143,33 @@ class App extends React.Component {
     }
   }
 
+  userSpymasterSwitch = (userName) => {
+    const spymaster = this.state.users[userName].spymaster;
+    if (spymaster) {
+      const users = { ...this.state.users }
+      // update the selected 
+      users[userName].spymaster = false;
+      // update state
+      this.setState({
+        users: users
+      });
+      if (this.state.localUser.userName === userName) {
+        this.setState({ spymaster: false })
+      }
+    } else {
+      const users = { ...this.state.users }
+      // update the selected 
+      users[userName].spymaster = true;
+      // update state
+      this.setState({
+        users: users
+      });
+      if (this.state.localUser.userName === userName) {
+        this.setState({ spymaster: true })
+      }
+    }
+  }
+
   getUser = () => {
     if (this.state.localUser !== null) {
       const checkLocalUser = this.state.localUser.userName;
@@ -177,6 +205,8 @@ class App extends React.Component {
             localUser={false}
             deleteUser={this.deleteUser}
             switchTeam={this.switchTeam}
+            spymaster={this.state.users[key].spymaster}
+            userSpymasterSwitch={this.userSpymasterSwitch}
           />
         ))
       )
@@ -189,6 +219,8 @@ class App extends React.Component {
               localUser={this.state.localUser.userName === key}
               deleteUser={this.deleteUser}
               switchTeam={this.switchTeam}
+              spymaster={this.state.users[key].spymaster}
+              userSpymasterSwitch={this.userSpymasterSwitch}
             />
           ))
         )

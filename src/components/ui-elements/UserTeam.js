@@ -12,7 +12,8 @@ class UserTeam extends React.Component {
     if (this.formRef.current[1].checked) {
       const user = {
         userName: this.userNameRef.current.value,
-        team: 'red'
+        team: 'red',
+        spymaster: false
       }
       this.props.addUser(user)
     } else {

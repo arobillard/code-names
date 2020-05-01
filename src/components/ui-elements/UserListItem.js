@@ -12,12 +12,20 @@ class UserListItem extends React.Component {
     const team = this.props.user.team;
     this.props.switchTeam(userName, team);
   }
+  
+  handleSpymaster = () => {
+    console.log('spymaster')
+    this.props.userSpymasterSwitch(this.props.user.userName)
+  }
 
   render() {
     return (
       <div className={`user${this.props.localUser ? ' local-user' : ''} push-1-2`}>
         <span className="profile-picture inline-block push-r-1-2"></span>
         <strong className="username spread-right">{this.props.user.userName}</strong>
+        <button className={`push-r-1-2${this.props.spymaster ? '' : ' opacity-1-2'}`} onClick={this.handleSpymaster}>
+          <i className="material-icons">{this.props.spymaster ? 'visibility' : 'visibility_off'}</i>
+        </button>
         <button className="push-r-1-2" onClick={this.handleSwitchTeam}>
           <i className="material-icons">cached</i>
         </button>
