@@ -14,7 +14,7 @@ class ControlBar extends React.Component {
             <span className="lever"></span>
           </label>
         </div>
-        <button className="btn" onClick={this.props.generateCards}>New Game</button>
+        <button className="btn" onClick={this.props.handleNewGame}>New Game</button>
       </div>
     )
   }

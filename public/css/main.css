@@ -661,7 +661,7 @@ p, .body-1 {
 }
 
 .wrapper {
-  max-width: 70em;
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1075,9 +1075,38 @@ main {
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
 }
+.team-card .team-header {
+  border-bottom: 3px solid;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.team-card .team-header h2 {
+  margin-bottom: 0;
+}
+.team-card .team-header .score {
+  font-size: 1.25rem;
+}
 .team-card .user {
   display: flex;
   align-items: center;
+}
+.team-card .user.local-user {
+  position: relative;
+  z-index: 2;
+}
+.team-card .user.local-user::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + .5rem);
+  height: calc(100% + .5rem);
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: -1;
 }
 .team-card .user .profile-picture {
   width: 1.25rem;
@@ -1087,11 +1116,35 @@ main {
 .team-card .user .username {
   font-size: 0.875rem;
 }
+.team-card.team-red .team-header {
+  border-color: #D3100F;
+}
+.team-card.team-red .team-header h2 {
+  color: #7F0806;
+}
+.team-card.team-red .team-header .score {
+  color: #D3100F;
+}
 .team-card.team-red .profile-picture {
   background-color: #f68585;
 }
+.team-card.team-red .material-icons {
+  color: #D3100F;
+}
+.team-card.team-blue .team-header {
+  border-color: #0069A2;
+}
+.team-card.team-blue .team-header h2 {
+  color: #003551;
+}
+.team-card.team-blue .team-header .score {
+  color: #0069A2;
+}
 .team-card.team-blue .profile-picture {
   background-color: #3cbaff;
+}
+.team-card.team-blue .material-icons {
+  color: #0069A2;
 }
 
 .user-team-pop-up-overlay {
@@ -1104,7 +1157,7 @@ main {
   z-index: 1000;
 }
 .user-team-pop-up-overlay .user-team-pop-up {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: calc(100% - 2rem);
@@ -1129,6 +1182,24 @@ main {
 .user-team-pop-up-overlay .user-team-pop-up [type=radio]:checked + label {
   opacity: 1;
 }
+@media only screen and (min-width: 60em) {
+  .user-team-pop-up-overlay .user-team-pop-up {
+    position: absolute;
+  }
+}
+.user-team-pop-up-overlay .btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 30em) {
+  .user-team-pop-up-overlay .btn-wrap {
+    display: block;
+  }
+  .user-team-pop-up-overlay .btn-wrap .btn-red {
+    margin-right: 1rem;
+  }
+}
 
 .switch, .switch * {
   -webkit-tap-highlight-color: transparent;
@@ -1146,6 +1217,7 @@ main {
   opacity: 0;
   width: 0;
   height: 0;
+  display: inline-block;
 }
 
 .switch label input[type=checkbox]:checked + .lever {

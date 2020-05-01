@@ -250,9 +250,38 @@
   background-color: #f2f2f2;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+  .team-header {
+    border-bottom: 3px solid;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    h2 {
+      margin-bottom: 0;
+    }
+    .score {
+      font-size: 1.25rem;
+    }
+  }
   .user {
     display: flex;
     align-items: center;
+    &.local-user {
+      position: relative;
+      z-index: 2;
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + .5rem);
+        height: calc(100% + .5rem);
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: -1;
+      };
+    }
     .profile-picture {
       width: 1.25rem;
       height: 1.25rem;
@@ -263,13 +292,37 @@
     }
   }
   &.team-red {
+    .team-header {
+      border-color: $c-red;
+      h2 {
+        color: $c-red-dark;
+      }
+      .score {
+        color: $c-red;
+      }
+    }
     .profile-picture {
       background-color: lighten($c-red, 30%);
     }
+    .material-icons {
+      color: $c-red;
+    }
   }
   &.team-blue {
+    .team-header {
+      border-color: $c-blue;
+      h2 {
+        color: $c-blue-dark;
+      }
+      .score {
+        color: $c-blue;
+      }
+    }
     .profile-picture {
       background-color: lighten($c-blue, 30%);
+    }
+    .material-icons {
+      color: $c-blue;
     }
   }
 }
