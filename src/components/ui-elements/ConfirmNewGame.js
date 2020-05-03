@@ -3,6 +3,7 @@ import React from 'react';
 class ConfirmNewGame extends React.Component {
 
   newGame = () => {
+    this.props.clearSpymasters()
     this.props.generateCards();
     this.props.handleConfirm();
     if (this.props.cards.word1 !== undefined) {

@@ -11,3 +11,9 @@
   background-color: $c-subtle-accent;
   @include bgBasic();
 }
+
+@mixin hov() {
+  &:hover, &:focus {
+    @content;
+  }
+}
