@@ -13,7 +13,8 @@
 .switch label input[type=checkbox] {
   opacity:0;
   width:0;
-  height:0
+  height:0;
+  display: inline-block;
 }
 
 .switch label input[type=checkbox]:checked+.lever {
